@@ -1,0 +1,20 @@
+{{define "base"}}
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	{{ template "title ."}}
+</HEAD>
+<BODY>
+	{{template "script".}}
+	{{template "sidebar" .}}
+	{{template "content" .}}
+	Hello World
+<FOOTER>
+	Copyright 2015, Hana Microelectronics Lamphun
+</FOOTER>
+</BODY>
+</HTML>
+{{end}}
+
+{{ define "scripts" }}{{ end }}
+{{ define "sidebar" }}{{ end }}

@@ -33,11 +33,10 @@ func main() {
 	http.ListenAndServe(":8080", r)
 }
 
-func Test(w http.ResponseWriter, r *http.Response, p httprouter.Params) {
-}
-
 func Index(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
-	fmt.Fprint(w, "hello from GO")
+	u := User{En: 12, Pass: "love you all", Type: "admin"}
+	Tmpl.ExecuteTemplate(w, "base", u)
+	//fmt.Fprintf(w, "%v", u)
 }
 
 func Lists(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
